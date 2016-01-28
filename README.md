@@ -2,6 +2,8 @@
 
 A smart package for Meteor that allows you to:
 
+## Features
+
 * iterate over all defined templates easily.
 * attach multiple created/rendered/destroyed hooks to a template.
 * attach a created/rendered/destroyed hook to all templates.
