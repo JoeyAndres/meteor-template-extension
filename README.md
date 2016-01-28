@@ -1,7 +1,5 @@
-[![Build Status](https://travis-ci.org/aldeed/meteor-template-extension.svg)](https://travis-ci.org/aldeed/meteor-template-extension)
-
-template-extension
-=========================
+template-extension-extended
+===========================
 
 A smart package for Meteor that allows you to:
 
@@ -44,8 +42,6 @@ $ meteor add aldeed:template-extension
 ```
 
 ## Compatibility
-
-- Use a 3.x.x release with Meteor 1.0.x or Meteor 1.1.x
 - Use a 4.x.x release with Meteor 1.2+
 
 ## Template.forEach(callback)

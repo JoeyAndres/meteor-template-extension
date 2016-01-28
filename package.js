@@ -1,8 +1,8 @@
 Package.describe({
-  name: "aldeed:template-extension",
-  summary: "Adds template features currently missing from the templating package",
-  version: "4.0.1",
-  git: "https://github.com/aldeed/meteor-template-extension.git"
+  name: "jandres:template-extension",
+  summary: "Adds template features currently missing from the templating and template-extension package",
+  version: "4.0.2",
+  git: "https://github.com/JoeyAndres/meteor-template-extension.git"
 });
 
 Package.onUse(function(api) {
@@ -13,7 +13,11 @@ Package.onUse(function(api) {
     'blaze',
     'jquery',
     'underscore',
-    'tracker'
+    'tracker',
+
+    'timdown:rangy@1.2.3',
+    'jandres:mutation-summary@0.0.1',
+    'reactive-var'
   ], 'client');
 
   api.addFiles([
@@ -31,20 +35,28 @@ Package.onUse(function(api) {
     'lib/template-copy-as.js',
     'lib/template-instance-parent.js',
     'lib/template-instance-get.js',
-    'lib/template-parent-data-function.js'
+    'lib/template-parent-data-function.js',
+    'lib/template-children.js',
+    'lib/template-sibling.js'
   ], 'client');
 });
 
 Package.onTest(function(api) {
   api.use([
-    'aldeed:template-extension',
+    'jandres:template-extension',
     'jquery',
     'templating',
     'tinytest',
     'tracker',
     'ejson',
-    'underscore'
+    'underscore',
+
+    'timdown:rangy@1.2.3',
+    'jandres:mutation-summary@0.0.1',
+    'reactive-var'
   ], 'client');
+
+  api.imply('jandres:template-extension');
 
   api.addFiles([
     'tests.html',
