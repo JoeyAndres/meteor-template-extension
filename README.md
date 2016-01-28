@@ -1,5 +1,4 @@
-template-extension-extended
-===========================
+# template-extension-extended
 
 A smart package for Meteor that allows you to:
 
@@ -13,10 +12,12 @@ A smart package for Meteor that allows you to:
 * use `template.parent(numLevels, includeBlockHelpers)` to access a parent template instance.
 * use `template.get(fieldName)` to access the first field named `fieldName` in the current or ancestor template instances.
 * pass a function to `Template.parentData(fun)` to get the first data context which passes the test.
+* Get children via children/getChildren
+* Get siblings via siblings/getSiblings
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+## Table of Contents  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Installation](#installation)
 - [Compatibility](#compatibility)
