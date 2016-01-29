@@ -551,32 +551,3 @@ Tinytest.add('template-children - multi-tier children', function(test) {
   test.equal(multiTierView._templateInstance.children()[1].children().length, 2);
   test.equal(multiTierView._templateInstance.children(2).length, 6);
 });
-
-Tinytest.add('template-children - children re-ordering', function(test) {
-  // Establish 3 children.
-  manualChildren.set([0, 1, 2]);
-  var manualChildView = Blaze.render(Template.templateManualChild, $('body')[0]);
-  Tracker.flush();
-  test.isTrue(manualChildView._templateInstance._createdTemplateManualChild);
-  Tracker.flush();
-  test.isTrue(manualChildView._templateInstance._renderedTemplateManualChild);
-  test.equal(manualChildView._templateInstance.children().length, 3);
-
-  // Base case.
-  // Ensure that they are all in correct order.
-  var children = manualChildView._templateInstance.children();
-  var childrenTexts = children.map(function(child) { return child.data.text; });
-  test.equal(childrenTexts, [0, 1, 2]);
-
-  // DOM manipulation.
-  var template_wrapper = $('.template-manual-child').last().get(0);
-  swapElements(template_wrapper.children[2], template_wrapper.children[1]);
-
-  Tracker.flush();
-  test.isTrue(manualChildView._templateInstance._renderedTemplateManualChild);
-  var children = manualChildView._templateInstance.children();
-  var childrenTexts = children.map(function(child) { return child.data.text });
-  manualChildView._templateInstance.onReorder(function() {
-    test.equal(childrenTexts, [0, 2, 1]);
-  });
-});

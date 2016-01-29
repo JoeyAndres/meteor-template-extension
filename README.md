@@ -260,9 +260,28 @@ a given field. Or:
 var data = Template.parentData(function (data) {return data instanceof MyDocument;});
 ```
 
+## Template.children(tier)
+
+`Template.children` takes a `tier` that defaults to 1 (direct children). `tier` greater than 1 will be layed out in
+dfs order.
+
+## Template.getChildren(tier)
+
+`Template.getChildren` is reactive version of `Template.children`.
+
+## Template.siblings(includeBlockHelpers)
+
+`Template.siblings` get's the siblings of the current template. That is, all the other template with the same parent template
+as the current template. `includeBlockHelpers` is true by default, which means `{{UI.contentBlock}}` will count as a parent.
+
+## Template.getSiblings(includeBlockHelpers)
+
+`Template.getSiblings` is the reactive version of `Template.getSiblings`.
+
 ## Contributors
 
 * @aldeed
 * @grabbou
 * @mitar
 * @jgladch
+* @jandres

@@ -1,7 +1,7 @@
 Package.describe({
   name: "jandres:template-extension",
   summary: "Adds template features currently missing from the templating and template-extension package",
-  version: "4.0.2",
+  version: "4.0.3",
   git: "https://github.com/JoeyAndres/meteor-template-extension.git"
 });
 
@@ -16,7 +16,6 @@ Package.onUse(function(api) {
     'tracker',
 
     'timdown:rangy@1.2.3',
-    'jandres:mutation-summary@0.0.1',
     'reactive-var'
   ], 'client');
 
