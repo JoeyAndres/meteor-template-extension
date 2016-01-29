@@ -1,7 +1,7 @@
 Package.describe({
   name: "jandres:template-extension",
   summary: "Adds template features currently missing from the templating and template-extension package",
-  version: "4.0.3",
+  version: "4.0.4",
   git: "https://github.com/JoeyAndres/meteor-template-extension.git"
 });
 
