@@ -1,7 +1,7 @@
 Package.describe({
   name: "jandres:template-extension",
   summary: "Adds template features currently missing from the templating and template-extension package",
-  version: "4.0.4",
+  version: "4.0.5-alpha2",
   git: "https://github.com/JoeyAndres/meteor-template-extension.git"
 });
 
@@ -14,8 +14,6 @@ Package.onUse(function(api) {
     'jquery',
     'underscore',
     'tracker',
-
-    'timdown:rangy@1.2.3',
     'reactive-var'
   ], 'client');
 
