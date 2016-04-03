@@ -1,12 +1,12 @@
 Package.describe({
   name: "jandres:template-extension",
   summary: "Adds template features currently missing from the templating and template-extension package",
-  version: "4.0.5-alpha2",
+  version: "4.0.7-alpha3",
   git: "https://github.com/JoeyAndres/meteor-template-extension.git"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.2');
+  api.versionsFrom('METEOR@1.3');
   api.use([
     'ecmascript',
     'templating',
@@ -27,6 +27,7 @@ Package.onUse(function(api) {
     'lib/template-inherits-helpers-from.js',
     'lib/template-inherits-hooks-from.js',
     'lib/template-register-helpers.js',
+    'lib/template-rendered-prepend.js',
     'lib/template-replaces.js',
     'lib/template-clear-event-maps.js',
     'lib/template-copy-as.js',
